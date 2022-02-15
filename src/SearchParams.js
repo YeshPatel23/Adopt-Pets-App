@@ -5,6 +5,8 @@ const ANIMALs = ["bird", "cat", "dog", "rabbit", "reptile"];
 const SearchParams = () => {
   const [location, updateLocation] = useState("New York, NY");
   const [animal, updateAnimal] = useState("");
+  const [breed, updateBreed] = useState("");
+  const breeds = [];
   //   const location = "New York, NY";
   return (
     <div Class="SearchParams">
@@ -30,6 +32,24 @@ const SearchParams = () => {
               return (
                 <option key={animal} value={animal}>
                   {animal}
+                </option>
+              );
+            })}
+          </select>
+        </label>
+        <label htmlFor="breed">
+          Breed
+          <select
+            disabled={!breeds.length}
+            id="breed"
+            value={breed}
+            onChange={(e) => updateBreed(e.target.value)}
+          >
+            <option />
+            {breeds.map((breed) => {
+              return (
+                <option key={breed} value={breed}>
+                  {breed}
                 </option>
               );
             })}

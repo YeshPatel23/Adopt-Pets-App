@@ -29603,8 +29603,14 @@ var SearchParams = function SearchParams() {
   var _useState3 = (0, _react.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
       animal = _useState4[0],
-      updateAnimal = _useState4[1]; //   const location = "New York, NY";
+      updateAnimal = _useState4[1];
 
+  var _useState5 = (0, _react.useState)(""),
+      _useState6 = _slicedToArray(_useState5, 2),
+      breed = _useState6[0],
+      updateBreed = _useState6[1];
+
+  var breeds = []; //   const location = "New York, NY";
 
   return _react.default.createElement("div", {
     Class: "SearchParams"
@@ -29630,6 +29636,20 @@ var SearchParams = function SearchParams() {
       key: animal,
       value: animal
     }, animal);
+  }))), _react.default.createElement("label", {
+    htmlFor: "breed"
+  }, "Breed", _react.default.createElement("select", {
+    disabled: !breeds.length,
+    id: "breed",
+    value: breed,
+    onChange: function onChange(e) {
+      return updateBreed(e.target.value);
+    }
+  }, _react.default.createElement("option", null), breeds.map(function (breed) {
+    return _react.default.createElement("option", {
+      key: breed,
+      value: breed
+    }, breed);
   }))), _react.default.createElement("button", null, "Submit")));
 };
 
@@ -29702,7 +29722,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51454" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64816" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
