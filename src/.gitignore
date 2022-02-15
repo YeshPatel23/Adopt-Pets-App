@@ -1,7 +1,0 @@
-node_modules
-.cache/
-dist/
-.env
-.D5_Store
-coverage/
-.vscode
